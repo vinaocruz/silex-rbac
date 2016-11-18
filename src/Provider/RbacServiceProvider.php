@@ -14,7 +14,7 @@ class RbacServiceProvider implements ServiceProviderInterface
     {
     	$app['rbac'] = function(){
 			return new Rbac();
-    	}
+    	};
 
         $app['permission'] = function() use ($app) {
             if (is_null($app['rbac.db'])) {
