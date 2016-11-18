@@ -1,1 +1,1 @@
-# silex-rbac
+# silex-simple-rbac

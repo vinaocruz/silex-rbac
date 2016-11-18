@@ -1,0 +1,18 @@
+{
+    "name": "vinaocruz/silex-simple-rbac",
+    "description": "A simple rbac for Silex",
+    "authors": [
+        {
+            "name": "Vinicius Cruz",
+            "email": "vinaocruz@gmail.com"
+        }
+    ],
+    "require": {
+        "zfr/rbac": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VinaoCruz\\Rbac\\": "src"
+        }
+    }
+}
