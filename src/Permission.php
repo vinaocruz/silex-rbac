@@ -16,19 +16,13 @@ class Permission
 		$sql = "INSERT INTO role_permission (role, permission) VALUES (:role, :permission)";
 	    $sth = $this->db->prepare($sql);
 
-	    $sth->bindParam(":role", $role_id, \PDO::PARAM_STR);
-	    $sth->bindParam(":permission", $user_id, \PDO::PARAM_STR);
-
         return $sth->execute([":role" => $role->getName(), ":permission" => $resource]);
 	}
 
 	public function revoke($resource, Role $role)
 	{
-		$sql = "DELETE FROM role_permission WHERE role = :role AND permission = :permission)";
+		$sql = "DELETE FROM role_permission WHERE role = :role AND permission = :permission ";
 	    $sth = $this->db->prepare($sql);
-
-	    $sth->bindParam(":role", $role_id, \PDO::PARAM_STR);
-	    $sth->bindParam(":permission", $user_id, \PDO::PARAM_STR);
 
         return $sth->execute([":role" => $role->getName(), ":permission" => $resource]);
 	}
